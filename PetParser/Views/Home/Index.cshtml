@@ -1,0 +1,22 @@
+﻿@model IList<PetParser.ViewModels.GenderPetViewModel>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>View</title>
+</head>
+<body>
+    @foreach (var item in Model)
+    {
+        <h2>@item.Gender</h2>
+
+        <ul>
+            @foreach (var pet in item.PetName)
+            {
+                <li>@pet.ToString()</li>
+            }
+        </ul>
+    }
+</body>
+</html>
